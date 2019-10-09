@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1570613125020" clover="3.2.0">
+  <project timestamp="1570613125020" name="All files">
+    <metrics statements="18" coveredstatements="16" conditionals="8" coveredconditionals="7" methods="11" coveredmethods="11" elements="37" coveredelements="34" complexity="0" loc="18" ncloc="18" packages="1" files="1" classes="1"/>
+    <file name="index.jsx" path="/Users/johnrocela/Desktop/paloit/singtel/pages/index.jsx">
+      <metrics statements="18" coveredstatements="16" conditionals="8" coveredconditionals="7" methods="11" coveredmethods="11"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="27" count="8" type="stmt"/>
+      <line num="28" count="8" type="stmt"/>
+      <line num="35" count="2" type="stmt"/>
+      <line num="39" count="2" type="stmt"/>
+      <line num="40" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="41" count="2" type="stmt"/>
+      <line num="45" count="13" type="stmt"/>
+      <line num="55" count="39" type="stmt"/>
+      <line num="61" count="1" type="stmt"/>
+      <line num="75" count="1" type="stmt"/>
+      <line num="77" count="39" type="stmt"/>
+      <line num="85" count="52" type="stmt"/>
+    </file>
+  </project>
+</coverage>

@@ -1,0 +1,142 @@
+$white: #ffffff;
+$black: #ffffff;
+$grey-200: #edf2f7;
+$grey-400: #cbd5e0;
+$grey-500: #a0aec0;
+$grey-700: #4a5568;
+$red-400: #fc8181;
+$red-500: #f56565;
+$red-600: #e53e3e;
+$red-800: #9b2c2c;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.bar {
+  width: 100%;
+  overflow: hidden;
+  background: $grey-200;
+  border: 4px solid $grey-400;
+  border-radius: 4px;
+  transition: all 0.1s linear;
+  margin: 1rem 0;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  .label {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    top: 0;
+    box-sizing: border-box;
+  }
+
+  .progress {
+    height: 24px;
+    background: $grey-400;
+    transition: all 0.1s linear;
+    padding: 1.7rem 0;
+    box-sizing: border-box;
+  }
+
+  &:hover {
+    border-color: $red-400;
+  }
+
+  &.selected {
+    border: 4px solid $red-500;
+
+    &:hover {
+      border-color: $red-500;
+    }
+  }
+
+  &.exceeded {
+    border-color: $red-600;
+    color: $white;
+
+    .progress {
+      background: $red-500;
+      color: white;
+    }
+  }
+
+  &.selected.exceeded {
+    border-color: $red-800;
+  }
+}
+
+.buttons {
+  margin: 2rem 0;
+  display: flex;
+
+  @media (min-width: 350px) and (max-width: 568px) {
+    flex-direction: column;
+  }
+
+  select {
+    border-radius: 4px;
+    background: $grey-400;
+    color: $grey-700;
+    border: none;
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: 0 1px 3px rgba($black, 0.05), 0 2px 5px rgba($black, 0.08);
+
+    // https://stackoverflow.com/questions/52572821/how-to-make-both-up-down-arrow-in-select-input-field-in-css/52691577
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA3klEQVRIS+3VMU9CMRTF8d8zBL+aizoQFhx0kUk33RzdYMNFXUFnYeGrYYyaJiUxJHDLSxodbNKpfeffc9/pbaPyaCrr+3OA++z4rtT5Pg5GuMnCY9yWQEoBE1xhlUUP8YDrCBIB0vojLvGO0yz4hm4JJAKcYYoPHGOZAUdYoIMBXrc5iQAHeMlzviFygj7O8dkWEJU4XI8chALRhn9AVKHf70VRTHu4wFfbmKZLNKt50dLBnna0imcMd/2I0phWa3Y/D1e1Xa9BCZJG0VuQNpaWKMx72xS1Fl5/WN3BN+AgJhnZQlq4AAAAAElFTkSuQmCC');
+    background-position: calc(100% - 0.5rem), 100% 0;
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat;
+
+    @media (min-width: 350px) and (max-width: 568px) {
+      width: 100%;
+    }
+  }
+
+  .button-group {
+    @media (min-width: 350px) and (max-width: 568px) {
+      margin-left: -1rem;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  .button {
+    border-radius: 4px;
+    background: $grey-400;
+    color: $grey-700;
+    font-size: 1rem;
+    border: none;
+    padding: 1rem;
+    margin-left: 1rem;
+    min-width: 4rem;
+    box-shadow: 0 1px 3px rgba($black, 0.05), 0 2px 5px rgba($black, 0.08);
+    outline: 0;
+    transition: all 0.1s linear;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      background: $grey-500;
+    }
+  }
+}
