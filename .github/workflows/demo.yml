@@ -1,4 +1,4 @@
-name: Frontend CI
+name: ProgressBar Demo
 on: [push]
 jobs:
   build:
